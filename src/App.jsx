@@ -1,5 +1,10 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import {
+	createBrowserRouter,
+	Outlet,
+	RouterProvider,
+	ScrollRestoration,
+} from "react-router-dom"; // Change these imports
 import Header from "./Header";
 import Home from "./Home";
 import AboutUs from "./AboutUs";
@@ -18,38 +23,93 @@ import CorporateGifting from "./service/CorporateGifting";
 import ContentDevelopment from "./service/ContentDevelopment";
 import RetailStoreFabrication from "./service/RetailStoreFabrication";
 
-function App() {
+function Layout() {
 	return (
 		<div className="bg-white dark:bg-gray-900">
+			<ScrollRestoration />
 			<Header />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/about" element={<AboutUs />} />
-				<Route path="/services">
-					<Route index element={<ServicesPage />} />
-					<Route
-						path="Strategic-Print-Procurement"
-						element={<StrategicPrintProcurement />}
-					/>
-					<Route path="Retail-Branding" element={<RetailBranding />} />
-					<Route path="store-Displays-POSM" element={<StoreDisplays />} />
-					<Route path="Creative-Production" element={<CreativeProduction />} />
-					<Route path="Retail-Activation" element={<RetailActivation />} />
-					<Route path="Event-Marketing" element={<EventMarketing />} />
-					<Route path="Corporate-Gifting" element={<CorporateGifting />} />
-					<Route path="Content-Development" element={<ContentDevelopment />} />
-					<Route
-						path="Retail-Store-Fabrication"
-						element={<RetailStoreFabrication />}
-					/>
-				</Route>
-				<Route path="/project" element={<Project />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="*" element={<NotFound />} />
-			</Routes>
+			<Outlet />
 			<Footer />
 		</div>
 	);
+}
+
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: <Layout />,
+		children: [
+			{
+				path: "/",
+				element: <Home />,
+			},
+			{
+				path: "/about",
+				element: <AboutUs />,
+			},
+			{
+				path: "/services",
+				children: [
+					{
+						index: true,
+						element: <ServicesPage />,
+					},
+					{
+						path: "Strategic-Print-Procurement",
+						element: <StrategicPrintProcurement />,
+					},
+					{
+						path: "Retail-Branding",
+						element: <RetailBranding />,
+					},
+					{
+						path: "store-Displays-POSM",
+						element: <StoreDisplays />,
+					},
+					{
+						path: "Creative-Production",
+						element: <CreativeProduction />,
+					},
+					{
+						path: "Retail-Activation",
+						element: <RetailActivation />,
+					},
+					{
+						path: "Event-Marketing",
+						element: <EventMarketing />,
+					},
+					{
+						path: "Corporate-Gifting",
+						element: <CorporateGifting />,
+					},
+					{
+						path: "Content-Development",
+						element: <ContentDevelopment />,
+					},
+					{
+						path: "Retail-Store-Fabrication",
+						element: <RetailStoreFabrication />,
+					},
+				],
+			},
+			{
+				path: "/project",
+				element: <Project />,
+			},
+			{
+				path: "/contact",
+				element: <Contact />,
+			},
+			{
+				path: "*",
+				element: <NotFound />,
+			},
+		],
+	},
+]);
+
+function App() {
+	return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
 	const [year, setYear] = useState(new Date().getFullYear());
@@ -18,14 +19,14 @@ export default function Footer() {
 					<strong className="text-xl text-white sm:text-xl">
 						Let&apos;s Talk about project!
 					</strong>
-					<a
-						href="#"
+					<Link
+						to="#"
 						className="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-white before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
 					>
 						<span className="relative text-base font-semibold text-primary">
 							Get in touch
 						</span>
-					</a>
+					</Link>
 				</div>
 
 				{/* Footer Links */}
@@ -46,36 +47,36 @@ export default function Footer() {
 						</p>
 						<ul className="mt-8 space-y-4 text-sm">
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="#"
 								>
 									Company History
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="#"
 								>
 									Meet the Team
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="#"
 								>
 									Employee Handbook
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="#"
 								>
 									Careers
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -87,36 +88,76 @@ export default function Footer() {
 						</p>
 						<ul className="mt-8 space-y-4 text-sm">
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="/services/Strategic-Print-Procurement"
 								>
-									Web Development
-								</a>
+									Strategic Print Procurement
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="/services/Retail-Branding"
 								>
-									Web Design
-								</a>
+									Retail Branding
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="/services/store-Displays-POSM"
 								>
-									Marketing
-								</a>
+									In Store Displays POSM
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="/services/Creative-Production"
 								>
-									Google Ads
-								</a>
+									Creative Production
+								</Link>
+							</li>
+							<li>
+								<Link
+									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
+									to="/services/Retail-Activation"
+								>
+									Retail Activation
+								</Link>
+							</li>
+							<li>
+								<Link
+									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
+									to="/services/Event-Marketing"
+								>
+									Event Marketing
+								</Link>
+							</li>
+							<li>
+								<Link
+									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
+									to="/services/Corporate-Gifting"
+								>
+									Corporate Gifting
+								</Link>
+							</li>
+							<li>
+								<Link
+									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
+									to="/services/Content-Development"
+								>
+									Content Development
+								</Link>
+							</li>
+							<li>
+								<Link
+									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
+									to="/services/Retail-Store-Fabrication"
+								>
+									Retail Store Fabrication
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -128,44 +169,44 @@ export default function Footer() {
 						</p>
 						<ul className="mt-8 space-y-4 text-sm">
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="#"
 								>
 									Online Guides
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="#"
 								>
 									Conference Notes
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="#"
 								>
 									Forum
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="#"
 								>
 									Downloads
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="#"
 								>
 									Upcoming Events
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -177,25 +218,25 @@ export default function Footer() {
 						</p>
 						<ul className="mt-8 space-y-4 text-sm">
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="#"
 								>
 									FAQs
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75"
-									href="#"
+									to="#"
 								>
 									Support
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									className="group flex justify-center md:justify-start gap-1.5"
-									href="#"
+									to="#"
 								>
 									<span className="text-gray-700 dark:text-white/80 transition dark:hover:text-white/40 hover:text-gray-700/75">
 										Live Chat
@@ -204,7 +245,7 @@ export default function Footer() {
 										<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
 										<span className="relative inline-flex size-2 rounded-full bg-primary"></span>
 									</span>
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -214,52 +255,52 @@ export default function Footer() {
 				<div className="mt-16">
 					<ul className="flex justify-center gap-6 sm:justify-end">
 						<li>
-							<a
-								href="#"
+							<Link
+								to="#"
 								rel="noreferrer"
 								target="_blank"
 								className="text-primary dark:text-secondary transition hover:text-primary/70 dark:hover:text-secondary/70"
 							>
 								<i className="fa-brands fa-facebook fa-xl text-primary dark:text-white dark:hover:text-primary hover:text-secondary cursor-pointer"></i>
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a
-								href="#"
+							<Link
+								to="#"
 								rel="noreferrer"
 								target="_blank"
 								className="text-primary dark:text-secondary transition hover:text-primary/70 dark:hover:text-secondary/70"
 							>
 								<i className="fa-brands fa-linkedin fa-xl text-primary dark:text-white dark:hover:text-primary hover:text-secondary cursor-pointer"></i>
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a
-								href="#"
+							<Link
+								to="#"
 								rel="noreferrer"
 								target="_blank"
 								className="text-primary transition hover:text-primary/75"
 							>
 								<i className="fa-brands fa-instagram fa-xl text-primary dark:text-white dark:hover:text-primary hover:text-secondary cursor-pointer"></i>
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a
-								href="#"
+							<Link
+								to="#"
 								rel="noreferrer"
 								target="_blank"
 								className="text-primary transition hover:text-primary/75"
 							>
 								<i className="fa-brands fa-twitter fa-xl text-primary dark:text-white dark:hover:text-primary hover:text-secondary cursor-pointer"></i>
-							</a>
+							</Link>
 						</li>
 					</ul>
 
 					{/* Logo + Copyright */}
 					<div className="mt-16 sm:flex sm:items-center sm:justify-between">
 						<div className="flex justify-center text-teal-600 sm:justify-start">
-							<a
-								href="#home"
+							<Link
+								to="#home"
 								aria-label="logo"
 								className="flex space-x-2 items-center"
 							>
@@ -270,7 +311,7 @@ export default function Footer() {
 								<span className="text-2xl font-bold text-gray-900 dark:text-white">
 									LOGO
 								</span>
-							</a>
+							</Link>
 						</div>
 
 						<p className="mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-right">

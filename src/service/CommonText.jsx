@@ -60,7 +60,9 @@ const CommonText = ({ pageHeading }) => {
 								</p>
 							</div>
 							<div>
-								<h2 className="text-2xl font-bold mt-8 mb-4">Why do this?</h2>
+								<h2 className="text-2xl font-bold mt-8 mb-4 dark:text-gray-300">
+									Why do this?
+								</h2>
 								<p className="text-gray-600 dark:text-gray-300">
 									Corporate gifting is an act of showing gratitude towards the
 									important people in your business that you value. Performing
